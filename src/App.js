@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Error from './pages/Error'
 import Sparrow from './pages/Sparrow'
+import Phoenix from './pages/Phoenix'
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 
@@ -28,6 +29,7 @@ function App() {
               <About {...props} data={data['about']}/>
             )} />
             <Route path='/engines/sparrow' component={Sparrow} />
+            <Route path='/phoenix' component={Phoenix} />
             <Route component={Error} />
           </Switch>
         </div>

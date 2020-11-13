@@ -7,9 +7,21 @@ const useStyles = ({
     maxWidth: "40%",
     margin: "auto"
   },
-  teamCont: {
+  /*teamCont: {
     marginTop: "32px",
     marginBottom: "32px"
+  }*/
+  teamCont: {
+    listStyle: 'none',
+    padding: '0px',
+  },
+  teamItem: {
+    borderBottom: "black solid 2px",
+    width: "60%",
+    margin: "auto",
+    "&:first-child": {
+      borderTop: "black solid 2px"
+    }
   }
 });
 
@@ -26,7 +38,20 @@ class About extends React.Component {
         <Typography variant="h4" align="center">
           The Team
         </Typography>
-        <div style={{overflowX: 'hidden'}}>
+        <div>
+          <ul className={this.props.classes.teamCont}>
+            {this.props.data['team'].map(({name, position}) => {
+              return (
+                <li className={this.props.classes.teamItem}>
+                  <Typography variant="h5" align="center">
+                    {name}, <span style={{fontSize: "16px"}}>{position}</span>
+                  </Typography>
+                </li>
+              )
+            })}
+          </ul>
+        </div>
+        {/*<div style={{overflowX: 'hidden'}}>
         <Grid container justify="center" spacing="4" className={this.props.classes.teamCont}>
           {this.props.data['team'].map(({name, position, img}) => {
             return (
@@ -45,7 +70,7 @@ class About extends React.Component {
             )
           })}
         </Grid>
-        </div>
+        </div>*/}
       </div>
     );
   }
