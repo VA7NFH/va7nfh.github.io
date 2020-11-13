@@ -74,7 +74,7 @@ class Header extends React.Component {
               }else{
                 return (
                   <div className={this.props.classes.dropdown}>
-                    <a className={this.props.classes.link}>{name}</a>
+                    <button style={{backgroundColor: "black", border: 'none'}} className={this.props.classes.link}>{name}</button>
                     <div className={this.props.classes.dropdownContent}>
                       {subs.map(({name, link}) => {
                         return (
