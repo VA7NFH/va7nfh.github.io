@@ -21,7 +21,7 @@ class About extends React.Component {
           About
         </Typography>
         <Typography variant="body1" align="center" className={this.props.classes.mainBody}>
-          Stellar Space Systems is dedicated to expanding in-space tranportation services. In the near future, many private space stations will grow in low-earth orbit and as in-space manufacturing grows, we will need a way to transport materials and products from station to station. We also provide components for those who want to build their own.
+          {this.props.data['abouttext']}
         </Typography>
         <Typography variant="h4" align="center">
           The Team

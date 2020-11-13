@@ -48,7 +48,8 @@ let data = {
         position: "CEO & Founder",
         img: ""
       }
-    ]
+    ],
+    "abouttext": "Stellar Space Systems is dedicated to expanding in-space tranportation services. In the near future, many private space stations will grow in low-earth orbit and as in-space manufacturing grows, we will need a way to transport materials and products from station to station. We also provide components for those who want to build their own."
   }
 }
 
