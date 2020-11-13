@@ -13,12 +13,16 @@ let data = {
         link: "/components",
         subs: [
           {
+            name: "Hummingbird",
+            link: '/engines/hummingbird'
+          },
+          {
             name: "Sparrow",
             link: '/engines/sparrow'
           },
           {
-            name: "Hummingbird",
-            link: '/engines/hummingbird'
+            name: "Nighthawk",
+            link: '/engines/nighthawk'
           }
         ]
       },

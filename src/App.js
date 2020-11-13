@@ -7,6 +7,7 @@ import Error from './pages/Error'
 import Sparrow from './pages/Sparrow'
 import Phoenix from './pages/Phoenix'
 import Hummingbird from './pages/Hummingbird'
+import Nighthawk from './pages/Nighthawk'
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 
@@ -32,6 +33,7 @@ function App() {
             <Route path='/engines/sparrow' component={Sparrow} />
             <Route path='/phoenix' component={Phoenix} />
             <Route path='/engines/hummingbird' component={Hummingbird} />
+            <Route path='/engines/nighthawk' component={Nighthawk} />
             <Route component={Error} />
           </Switch>
         </div>
