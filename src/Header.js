@@ -2,15 +2,22 @@ import React from 'react';
 import {AppBar, Toolbar, Typography} from '@material-ui/core'
 import { withStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom'
+import headerimg from './StellarSpaceSystems-whiteonblack.png'
 
 const useStyles = ({
   header: {
-    backgroundColor: 'black'
-    /*boxShadow: 'none'*/
+    backgroundColor: 'black',
+    height: '64px'
   },
-  headerName: {
+  headerLink: {
     color: 'white',
     textDecoration: 'none'
+  },
+  headerName: {
+  },
+  headerImg: {
+    height: '64px',
+    display: 'block'
   },
   link: {
     padding: '0 10px',
@@ -58,10 +65,11 @@ class Header extends React.Component {
     return (
       <AppBar className={this.props.classes.header}>
         <Toolbar>
-          <Link to='/' className={this.props.classes.headerName}>
-            <Typography variant='h6'>
-              Stellar Space Systems
-            </Typography>
+          <Link to='/' className={this.props.classes.headerLink}>
+            <img src={headerimg} className={this.props.classes.headerImg} alt="logo"/>
+          </Link>
+          <Link to='/' className={this.props.classes.headerLink}>
+            <Typography variant='h6' className={this.props.classes.headerName}>Stellar Space Systems</Typography>
           </Link>
           <nav className={this.props.classes.navCont}>
             {this.props.data['links'].map(({name, link, subs}) => {
