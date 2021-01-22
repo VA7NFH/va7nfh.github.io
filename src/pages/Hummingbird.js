@@ -9,7 +9,9 @@ class Hummingbird extends React.Component {
           Hummingbird
         </Typography>
         <Typography variant="h6" align="center">
-          The Hummingbird is a low-cost, reliable RCS engine, designed for a lunar lander.
+          The Hummingbird is a series of low-cost, reliable RCS engines, which are designed for a lunar lander.
+      
+          The first version is the Hummingbird A, which is currently the smallest version of the Hummingbird RCS lineup.
         </Typography>
       </div>
     )
