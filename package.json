@@ -23,7 +23,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "echo \"stellarspacesystems.com\" > build/CNAME && cp index.html 404.html && gh-pages -d build"
+    "deploy": "echo \"stellarspacesystems.com\" > build/CNAME && cp build/index.html build/404.html && gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
