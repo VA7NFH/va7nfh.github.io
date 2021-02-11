@@ -17,6 +17,14 @@ const theme = createMuiTheme({
   typography: {
     fontFamily: "inherit"
   },
+  overrides: {
+    MuiTypography: {
+      body1: {
+        margin: "auto",
+        maxWidth: "40%"
+      }
+    }
+  }
 })
 
 function App() {
