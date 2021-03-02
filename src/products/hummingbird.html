@@ -159,7 +159,7 @@
 <!-- Third party plugin JS-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 <!-- Core theme JS-->
-<script src="js/scripts.js"></script>
+<script src="../js/scripts.js"></script>
 
 <!--<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#signup">Contact</a></li>&ndash;&gt;-->
 <!--                    <div class="dropdown">-->
@@ -176,16 +176,17 @@
         <div class="dropdown">
             <button style="margin:10px; padding:20px" type="button"
                     class="nav-item btn btn-outline-secondary dropdown-toggle" id="dropdownMenuButton"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CAD
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" > <span id="buttonTitle">CAD</span>
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">USD</a>
-                <a class="dropdown-item" href="#">GBP</a>
+                <a id = "1" class="dropdown-item" href="#" onClick="convert(this.id)">USD</a>
+                <a id = "2" class="dropdown-item" href="#" onClick="convert(this.id)">GBP</a>
             </div>
         </div>
     </div>
 </div>
 
+<script src="../js/conversion.js"></script>
 </body>
 
 </html>
