@@ -1,3 +1,11 @@
+
+
+
+if (location.hostname === "localhost" || location.hostname === "127.0.0.1" || location.hostname === "") {
+    document.getElementById("hummingbird").href = "https://stellarspacesystems.com/products/hummingbird";
+}
+
+
 /*!
     * Start Bootstrap - Grayscale v6.0.3 (https://startbootstrap.com/theme/grayscale)
     * Copyright 2013-2020 Start Bootstrap
