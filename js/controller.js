@@ -42,7 +42,7 @@ var contact = `
 var footer = `
 <div class="container">Copyright © Stellar Space Systems 2021</div>
 `;
-var header = `
+/*var header = `
 <div class="container">
     <a class="navbar-brand js-scroll-trigger" href="#page-top">Stellar Space Systems</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,9 +66,9 @@ var header = `
         </ul>
     </div>
 </div>
-`; //more of navigation
+`; //more of navigation*/
 
 
 document.getElementById("contact").innerHTML = contact;
 document.getElementById("footer").innerHTML = footer;
-document.getElementById("header").innerHTML = header;
+// document.getElementById("header").innerHTML = header;
