@@ -39,7 +39,9 @@ var contact = `
     </div>
 </div>
 `;
-var footer = ``;
+var footer = `
+<div class="container">Copyright © Stellar Space Systems 2021</div>
+`;
 var header = `
 <div class="container">
     <a class="navbar-brand js-scroll-trigger" href="#page-top">Stellar Space Systems</a>
@@ -65,3 +67,5 @@ var header = `
     </div>
 </div>
 `; //more of navigation
+
+
