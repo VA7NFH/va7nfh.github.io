@@ -2,7 +2,10 @@
 
 
 if (location.hostname === "localhost" || location.hostname === "127.0.0.1" || location.hostname === "") {
+
+}else {
     document.getElementById("hummingbird").href = "https://stellarspacesystems.com/products/hummingbird";
+
 }
 
 
