@@ -1,6 +1,7 @@
 var currencyRates = {
         "USD": 0.8,
-        "GBP": 0.6
+        "GBP": 0.6,
+    "CAD": 1
 
 }
 var currentlySelected = "CAD";
@@ -39,5 +40,12 @@ function convert(clickedID) {
 
 
     //update curernt displayed value
-    document.getElementById("cost").textContent = "< " + currentVal + " " + currentlySelected;
+    var currentValstr = "";
+    if (currentlySelected === "GBP") {
+        currentValstr += "£";
+    } else {
+        currentValstr += "$"
+    }
+    currentValstr += currentVal;
+    document.getElementById("cost").textContent = "< " + currentValstr + " " + currentlySelected;
 }
