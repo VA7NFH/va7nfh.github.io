@@ -39,5 +39,5 @@ function convert(clickedID) {
 
 
     //update curernt displayed value
-
+    document.getElementById("cost").textContent = "< " + currentVal + " " + currentlySelected;
 }
