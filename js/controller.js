@@ -69,3 +69,6 @@ var header = `
 `; //more of navigation
 
 
+document.getElementById("contact").innerHTML = contact;
+document.getElementById("footer").innerHTML = footer;
+document.getElementById("header").innerHTML = header;
