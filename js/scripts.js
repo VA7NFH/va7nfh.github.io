@@ -4,7 +4,7 @@
 if (location.hostname === "localhost" || location.hostname === "127.0.0.1" || location.hostname === "") {
 
 }else {
-    if (document.getElementById("hummingbird") != null)
+    if (location.pathname==="index" || location.pathname==="index.html" )
     document.getElementById("hummingbird").href = "https://stellarspacesystems.com/products/hummingbird";
 
 }
