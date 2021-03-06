@@ -48,10 +48,12 @@ if (location.hostname === "localhost" || location.hostname === "127.0.0.1" || lo
     });
 
     // Activate scrollspy to add active class to navbar items on scroll
-    $("body").scrollspy({
-        target: "#mainNav",
-        offset: 100,
-    });
+    if (location.pathname==="index" || location.pathname==="index.html" || location.pathname.split('/')[location.pathname.split('/').length - 1] ==="index.html") {
+      $("body").scrollspy({
+          target: "#mainNav",
+          offset: 100,
+      });
+    }
 
     // Collapse Navbar
     var navbarCollapse = function () {
