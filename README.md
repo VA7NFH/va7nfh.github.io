@@ -1,5 +1,5 @@
 # site
 
-Repo for source of stellarspacesystems.com
+Repo for source code of https://stellarspacesystems.com
 
 Bootstrap branch
