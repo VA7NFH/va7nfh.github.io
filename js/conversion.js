@@ -1,16 +1,34 @@
+var items = [
+  {
+    id: "hummingbird",
+    cad: 4000,
+    pre: "< ",
+    post: ""
+  },
+  {
+    id: "swift",
+    cad: 400000,
+    pre: "",
+    post: "/kg"
+  }
+]
+
 var currencyRates = {
         "USD": 0.8,
         "GBP": 0.6,
-    "CAD": 1
-
+        "CAD": 1
 }
 var currentlySelected = "CAD";
 var valueInCad = 0;
 
-var product = document.getElementById("product");
-if (product.textContent === "hummingbird") {
-    valueInCad = 4000;
+var product;
+for (i of items) {
+  if (i.id === document.getElementById("product").textContent) {
+    product = i;
+  }
 }
+
+valueInCad = product.cad;
 
 var currentPos = {
     "1": "USD",
@@ -24,8 +42,7 @@ function convert(clickedID) {
     currentlySelected = currentPos[clickedID];
     currentVal = valueInCad*currencyRates[currentlySelected];
 
-
-    //upade display list and current pos lists
+    //update display list and current pos lists
     var currentEdited = 0;
     var button = document.querySelector('#buttonTitle');
         button.textContent = currentlySelected;
@@ -38,7 +55,6 @@ function convert(clickedID) {
         currentEdited++;
     }
 
-
     //update curernt displayed value
     var currentValstr = "";
     if (currentlySelected === "GBP") {
@@ -46,6 +62,6 @@ function convert(clickedID) {
     } else {
         currentValstr += "$"
     }
-    currentValstr += currentVal;
-    document.getElementById("cost").textContent = "< " + currentValstr + " " + currentlySelected;
+    currentValstr += currentVal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    document.getElementById("cost").textContent = product.pre + currentValstr + product.post + " " + currentlySelected;
 }

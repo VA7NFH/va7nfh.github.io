@@ -40,7 +40,7 @@ var contact = `
 </div>
 `;
 var footer = `
-<div class="container">Copyright © Stellar Space Systems 2021</div>
+<div class="container">Copyright © Stellar Space Systems `+new Date().getFullYear()+`</div>
 `;
 /*var header = `
 <div class="container">
