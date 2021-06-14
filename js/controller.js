@@ -42,33 +42,78 @@ var contact = `
 var footer = `
 <div class="container">Copyright © Stellar Space Systems `+new Date().getFullYear()+`</div>
 `;
-/*var header = `
+
+var links = [
+  {
+    name: "About",
+    type: "link",
+    href: "/about.html"
+  },
+  {
+    name: "Products",
+    type: "dropdown",
+    links: [
+      {
+        name: "Hummingbird",
+        type: "link",
+        href: "/products/hummingbird.html"
+      },
+      {
+        name: "Sparrow",
+        type: "link",
+        href: "/products/sparrow.html"
+      },
+      {
+        type: "divider"
+      },
+      {
+        name: "Swift",
+        type: "link",
+        href: "/products/swift.html"
+      }
+    ]
+  }
+]
+
+var head = `
 <div class="container">
-    <a class="navbar-brand js-scroll-trigger" href="#page-top">Stellar Space Systems</a>
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand js-scroll-trigger" href="/">Stellar Space Systems</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+            aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+`;
 
+for (i of links) {
+  if (i.type === "link") {
+    console.log(window.location.pathname);
+    head += `<li class="nav-item"><a class="nav-link js-scroll-trigger`+(window.location.pathname == i.href || window.location.pathname == i.href.slice(0,-5) ? " active" : "")+`" href="`+i.href+`">`+i.name+`</a></li>`;
+  }else if (i.type === "dropdown") {
+    l = i.links.map(k => k.href)
+    head += `
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle `+(l.includes(window.location.pathname) || l.includes(window.location.pathname+".html") ? " active" : "")+`" href="#" id="navbarDropdown" role="button"
+           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">`+i.name+`</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">`
+    for (j of i.links) {
+      if (j.type === "link") {
+        head += `<a class="dropdown-item js-scroll-trigger`+(window.location.pathname == j.href || window.location.pathname == j.href.slice(0,-5) ? " active" : "")+`" href="`+j.href+`">`+j.name+`</a>`
+      }else if (j.type === "divider") {
+        head += `<div class="dropdown-divider"></div>`
+      }
+    }
+    head += `</div></li>`;
+  }
+}
 
-                    <a class="dropdown-item js-scroll-trigger" href="#abouthummingbird">Hummingbird</a>
-                    <a class="dropdown-item js-scroll-trigger" href="#aboutsparrow">Sparrow</a>
-                    <a class="dropdown-item js-scroll-trigger" href="#aboutnighthawk">Nighthawk</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item js-scroll-trigger" href="#aboutphoenix">Phoenix</a>
-            </div>
-        </ul>
-    </div>
+head += `</ul>
 </div>
-`; //more of navigation*/
-
+</div>`;
 
 document.getElementById("contact").innerHTML = contact;
 document.getElementById("footer").innerHTML = footer;
-// document.getElementById("header").innerHTML = header;
+document.getElementById("mainNav").innerHTML = head;

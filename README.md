@@ -2,4 +2,7 @@
 
 Repo for source code of https://stellarspacesystems.com
 
-Bootstrap branch
+dev instructions:
+```bash
+npx serve
+```
