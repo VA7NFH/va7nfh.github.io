@@ -1,3 +1,19 @@
+document.body.insertAdjacentHTML('beforeend',`
+<div class="container">
+    <div class="fixed-bottom">
+        <div class="dropdown">
+            <button style="margin:10px; padding:20px" type="button"
+                    class="nav-item btn btn-outline-secondary dropdown-toggle" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" > <span id="buttonTitle">CAD</span>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a id = "1" class="dropdown-item"  onClick="convert(this.id)">USD</a>
+                <a id = "2" class="dropdown-item"  onClick="convert(this.id)">GBP</a>
+            </div>
+        </div>
+    </div>
+</div>`);
+
 var items = [
   {
     id: "hummingbird",
@@ -10,6 +26,12 @@ var items = [
     cad: 400000,
     pre: "",
     post: "/kg"
+  },
+  {
+    id: "sparrow",
+    cad: 25000,
+    pre: "",
+    post: ""
   }
 ]
 
