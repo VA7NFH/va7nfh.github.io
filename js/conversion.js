@@ -23,7 +23,7 @@ var items = [
   },
   {
     id: "swift",
-    cad: 400000,
+    cad: 150000,
     pre: "",
     post: "/kg"
   },
