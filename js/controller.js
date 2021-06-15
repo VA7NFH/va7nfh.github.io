@@ -33,9 +33,9 @@ var contact = `
         </div>
     </div>
     <div class="social d-flex justify-content-center">
-        <a class="mx-2" target="_blank" href="https://www.youtube.com/channel/UCcDWszakBaLDEjaqmg8X-vg"><i class="fab fa-youtube"></i></a>
-        <a class="mx-2" target="_blank" href="https://discord.gg/WhFJJyY"><i class="fab fa-discord"></i></a>
-        <a class="mx-2" target="_blank" href="https://github.com/stellarspacesystems/"><i class="fab fa-github"></i></a>
+        <a class="mx-2" target="_blank" rel="noopener" href="https://www.youtube.com/channel/UCcDWszakBaLDEjaqmg8X-vg"><i class="fab fa-youtube"></i></a>
+        <a class="mx-2" target="_blank" rel="noopener" href="https://discord.gg/WhFJJyY"><i class="fab fa-discord"></i></a>
+        <a class="mx-2" target="_blank" rel="noopener" href="https://github.com/stellarspacesystems/"><i class="fab fa-github"></i></a>
     </div>
 </div>
 `;
