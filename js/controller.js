@@ -90,7 +90,6 @@ var head = `
 
 for (i of links) {
   if (i.type === "link") {
-    console.log(window.location.pathname);
     head += `<li class="nav-item"><a class="nav-link js-scroll-trigger`+(window.location.pathname == i.href || window.location.pathname == i.href.slice(0,-5) ? " active" : "")+`" href="`+i.href+`">`+i.name+`</a></li>`;
   }else if (i.type === "dropdown") {
     l = i.links.map(k => k.href)
